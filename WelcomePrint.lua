@@ -1,2 +1,1 @@
-print("#.lua | Автообновление!")
-print("Автор: Nenicadi")
+print("#.lua | Автообновление! Автор: Nenicadi")
