@@ -28,15 +28,15 @@ local CWhite = Color(255,255,255)
 local function NenicadiHack()
     local frame = vgui.Create("DFrame")
     frame:SetTitle("")
-    frame:SetSize(400,400)
+    frame:SetSize(350,200)
     frame:MakePopup()
 
     function frame:Paint( w, h )
         draw.RoundedBox(0,0,0,w,h,Color(CGrey.r , CGrey.g , CGrey.b , 200))
-        draw.SimpleText(" Взлом крафтов | #.lua " .. getprice, "A_18", 0, 0, CWhite)
+        draw.SimpleText("#.lua", "A_18", 0, 0, CWhite)
     end
 
-    local button_price = vgui.Create( "DTextEntry", frame )
+    local button_1 = vgui.Create( "DTextEntry", frame )
     button_1:Dock( TOP )
     button_1:SetFont( "R_24" )
     button_1:DockMargin( 0, 0, 0, 5 )
@@ -45,7 +45,7 @@ local function NenicadiHack()
 		getid = button_1:GetValue()
 	end
 
-    local button_price = vgui.Create( "DTextEntry", frame )
+    local button_2 = vgui.Create( "DTextEntry", frame )
     button_2:Dock( TOP )
     button_2:SetFont( "R_24" )
     button_2:DockMargin( 0, 0, 0, 5 )
@@ -64,7 +64,6 @@ local function NenicadiHack()
 		getprice = button_price:GetValue()
 	end
 
-    -- Принять
     local button_finish = vgui.Create( "DButton", frame )
     button_finish:Dock( BOTTOM )
     button_finish:SetFont( "R_24" )
@@ -81,7 +80,7 @@ local function NenicadiHack()
     end
     function button_finish:Paint( w, h )
         --draw.RoundedBox(0,0,0,w,h,CGrey)
-        draw.RoundedBox( 0, 0, 0, w, h, (self.Depressed or self:IsHovered( )) and Color(CGrey.r+24, CGrey.g+24, CGrey.b+24) or Color(CGrey.r, CGrey.g, CGrey.b) )
+        draw.RoundedBox( 0, 0, 0, w, h, (self.Depressed or self:IsHovered( )) and CBlue or CDarkBlue )
     end
 end
 
