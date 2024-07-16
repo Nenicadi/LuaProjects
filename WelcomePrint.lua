@@ -1,1 +1,1 @@
-print("#.lua | Автообновление! Автор: Nenicadi")
+print("Залетай на сайт: https://neli.su/")
